@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- www.public.asu.edu/~zharbiso/GIT_418/index.html -->
+    <!--
+        GIT418: The car repair logs - Home
+        Author: Zachary Harbison
+        Date: 10/22/18
+    -->
+    <title>The car repair logs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tcrl.css">
+	<script src="modernizr.custom.05819.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <a href="index.html">
+          <img src="tcrl_logo.jpg" alt="The car repair logs logo" width="1260" height="300">
+        </a>
+		
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a> </li>
+		  <li><a href="survey.html">Survey</a></li>
+		  <li><a href="logs.html">The logs</a></li>
+		  <li><a href="contact.html">Contact</a></li>
+	    </ul>
+      </nav>
+      <main>
+		<div class="picBar">
+	      <img src="cvIn.png" alt="cv into knuckle">
+	      <img src="balljointbad.png" alt="bad ball joint" width="480" height="350">
+	      <img src="bentstud.png" alt="bent stud" height="350">
+		</div>
+		
+	    <p> My idea for this site is it will be like a DIY guide for car repair/blog where I would take step by step pictures and instructions for what I was doing. That sort of site is something that I don't have any real interest in actually doing, so seems like it will be fun to play around with it.</p><br>
+        
+        <p>Ok, so as all of you may have noticed not much has gotten done on the site in the way of DIY guides. To make up for this I have added a new feature the "Quick Conversion Calculator" for those of you who don't feel like Googling it. The first quick conversion is cubic in to cubic centimeters and more usefully, cubic liters. More to come!</p>
+		
+		<div id="calcButton"><!--following buttons use tabSelector.js display each calculator, the value coriponds to calculator class divs-->
+			<button type="button" id="ci2CC" value="0">CI to CC</button>
+			<button type="button" id="mpg" value="1">MPG</button>
+			<button type="button" id="more" value="2">More</button>
+		</div>
+		<section id="QuickConCalc">
+			<div class="calculator">
+			  <h2>Quick Conversion Calculator</h2>
+			  <h3>Cubic Inch to Cubic Centimeters/Liters</h3>
+			  <img src="caliper.png" alt="digital caliper" height="150">
+			  <br>
+			  <label>Enter engine displacement<br>in cubic inches</label><br>
+			  <!--user input for calculations.js-->
+			  <input type="number" id="cuIn" size="6">
+			  <span id="userNum">
+			  <!--message will about conversion show up here--></span><br>
+			  <label>The equivalent in<br>cubic centimeters is :</label>
+			  <span id="cuC">
+			  <!--calculated CC will show up here--></span><br>
+			  <label>The equivalent in<br>cubic liters is :</label>
+			  <span id="cuL">
+			  <!--calculated cubic liters will show up here--></span><br>
+			  <!--clicking this button calls CubInchToCC() in calculations.js -->
+			  <button type="button" id="cuIn2CuC">Convert</button>
+			</div>
+			<div class="calculator">
+			  <h2>Quick Conversion Calculator</h2>
+			  <h3>Calculate MPG</h3><br>
+			  <!--user input for calculations.js-->
+			  <input type="number" id="mDriven" size="6">
+			  <label for="mDriven">Enter miles driven</label><br>
+			  <!--user input for calculations.js-->
+			  <input type="number" id="gallons" size="6">
+			  <label for="gallons">Enter gallons used</label><br>
+			  <img src="gasCan.jpg" alt="red gas can near truck" height="150">
+			  <br>
+			  <!--clicking this button calls CubInchToCC() in calculations.js -->
+			  <button type="button" id="mpgCon">Calculate</button><br>
+			  <br><span id="userMPG"><!--mpg will show up here--></span>
+			</div><br>
+			<div class="calculator">
+			  <h2>Quick Conversion Calculator</h2>
+			  <br><img src="torque.png" alt="bent stud" height="200"><br><br><br>
+			  <h3>More to come ...
+			  <br>
+			</div><br>
+		</section><!--end QuickConCalc-->
+        <section id="dateForm">
+			<form title="elapsed date">
+                <h2>Elapsed Date Calculator</h2>
+				<h3>Enter a date in (day month year) to see the amount of time that has elapsed.</h3><br>
+				<label for="userDay"> Day </label>
+				<input id="userDay" placeholder="day" type="number">
+				<label for="userMonth"> Month </label>
+				<input id="userMonth" placeholder="Month" type="number" >
+				<label for="userYear"> Year </label>
+				<input id="userYear"  placeholder="Year" type="number"><br>
+                <span id="errorMsg"></span><br>
+                <span id="displayDay"></span>
+                <span id="displayMonth"></span>
+                <span id="displayYear"></span><br>
+				<br><button type="button" id="elapsedSub">Submit</button>
+                <button type="reset">Reset</button>
+			</form>
+		</section><!--end dateForm-->
+      </main>
+      <footer>
+        Copyright &copy; 2018 The car repair logs <br> 
+        <a href="mailto:zachary.harbison@asu.edu">Zachary.Harbison@asu.edu</a><br>
+        <h2>This Site Is For Educational Purposes Only!</h2>
+      </footer>
+     
+    </div><!-- end #wrapper -->
+	<script src="calculations.js"></script><!--calculation script-->
+	<script src="tabSelector.js"></script><!--tabSelector script-->
+	<script src="dateTime.js"></script><!--dateTime script-->
+  </body>
+
+</html>

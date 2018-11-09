@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <!-- www.public.asu.edu/~zharbiso/GIT_418/contact.html -->
+    <!--
+        GIT418: The car repair logs - contact
+        Author: Zachary Harbison
+        Date: 10/25/18
+    -->
+     <title>The car repair logs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tcrl.css">
+	<script src="modernizr.custom.05819.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <a href="index.html">
+          <img src="tcrl_logo.jpg" alt="The car repair logs logo" width="1260" height="300">
+        </a>
+		
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a> </li>
+		  <li><a href="survey.html">Survey</a></li>
+		  <li><a href="logs.html">The logs</a></li>
+		  <li><a href="contact.html">Contact</a></li>
+
+	    </ul>
+      </nav>
+      <main id="contactSpace">
+        <!-- Debugging the Form! While coding this form and contactForm.js I ran into several syntax, runtime, and logical errors. To work through these issues I used the built in debugger tool (chrome). I first checked to see if any errors were listed in the console. Much of the time I could get the line number and see very quickly where I made a mistake. Other times (mainly with logical errors) I would set a break point where I suspected I was having an issue and step though until I could see where the problem was. For example I had a problem with the if statement that checked the phone number for NaN. Everything looked fine and there were no console errors but every time I ran the program it would through the NaN error that I had set up. when I set a break point I could see that it was evaluating the element because I hadn't used the value method. When I added .value everything worked as expected. I have used log method for debugging before but with js and html it makes more sense for me to run it in the browser so I don't have to write a testcase/drive (an additional source of errors), although if I were releasing this code for others to use going through real test cases would be a good idea. --> 
+		<section id="contactForm">
+			<form id="contact" title="contact form">
+				<h3>Contact Me!</h3>
+				<label for="formName"class="floatLeft">Name</label><br>
+				<input id="formName" class="floatRight" placeholder="Name" type="text"><br>
+				<label for="formEmail">Email</label><br>
+				<input id="formEmail" class="floatRight" placeholder="Email" type="text" ><br>
+				<label for="formPhone">Phone</label><br>
+				<input id="formPhone" class="floatRight" placeholder="Phone" type="text"><br>
+				<label for="formSub">Subject</label><br>
+				<input id="formSub" class="floatRight" placeholder="Subject" type="text"><br>
+				<label for="formMsg">Message</label><br>
+				<textarea id="formMsg"class="floatRight" placeholder="Message"></textarea><br>
+				<button type="button" id="contactSub">Submit</button><br><br><span id="response"></span><br>
+				<div id="contactOpt">
+					<p>I would like to :</p>
+					<input type="checkbox" name="checkOpt" id="newsletter" value="0">
+					<span name="checkOptTxt" id="newsletterTxt">sign up for the News Letter</span><br>
+					<input type="checkbox" name="checkOpt" id="callBack" value="1">
+					<span name="checkOptTxt" id="callBackTxt">receive a call back about this message</span><br>
+					<input type="checkbox" name="checkOpt" id="mailBack" value="2">
+					<span name="checkOptTxt" id="mailBackTxt">receive an email back about this message</span><br>
+					<input type="checkbox" name="checkOpt" id="donate" value="3">
+					<span name="checkOptTxt" id="donateTxt">donate money for future development</span><br>
+					<input type="checkbox" name="checkOpt" id="takeDown" value="4">
+					<span name="checkOptTxt" id="takeDownTxt">suggest this site be demolished</span><br>
+				</div>
+			</form><!--end of form-->
+			<div id="displaySub">
+				<h3>Submission Successful!!!</h3><br>
+				<p>	details -><br>
+					name: <span id="subName"></span><br>
+					email: <span id="subEmail"></span><br>
+					number: <span id="subPhone"></span><br>
+					subject: <span id="subSubject"></span><br>
+					message: <span id="subMessage"></span><br>
+					options: <span id="subOption"></span><br>
+				</p>
+				<h3>Thank You</h3>
+			</div>
+		</section>
+      </main>
+      <footer>
+        Copyright &copy; 2018 The car repair logs <br> 
+        <a href="mailto:zachary.harbison@asu.edu">Zachary.Harbison@asu.edu</a><br>
+        <h2>This Site Is For Educational Purposes Only!</h2>
+      </footer>
+    </div><!-- end #wrapper -->
+    <script src="contactForm.js"></script><!--contact form script-->
+  </body>
+
+</html>

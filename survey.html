@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The car repair logs - About -->
+     <title>The car repair logs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tcrl.css">
+	<script src="modernizr.custom.05819.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <a href="index.html">
+          <img src="tcrl_logo.jpg" alt="The car repair logs logo" width="1260" height="300">
+        </a>
+		
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a> </li>
+		  <li><a href="survey.html">Survey</a></li>
+		  <li><a href="logs.html">The logs</a></li>
+		  <li><a href="contact.html">Contact</a></li>
+
+	    </ul>
+      </nav>
+      <main>
+      <!--survey goes here-->
+      <section id="survStage">
+          <form id="survey" onsubmit="return false"><!--keep enter key from submitting form 
+                                            (this form has no submit otherwise would have to change this)-->
+          
+            <div id="scene1">
+                <h1>Please Take A Survey About This Site.</h1>
+                <button type="button" id="startSurv" value="1">Click to Start!</button>
+            </div><!--End scene1-->
+            <div id="scene2">
+                <h1 id="questName">What Is Your Name?</h1>
+                <input type="text" name="userName" id="userName" placeholder="John Smith"><br>
+                <input type="radio" name="anonymous" id="anonymous"><span>select to sign in anonymously</span><br>
+                <span id="errMsg" class="err"></span><br>
+                <button type="button" id="goTOScene3" value="2">Enter</button>
+            </div><!--End scene2-->
+            <div id="scene3">
+                <h1>Question #1</h1><br>
+                <h2>Was is easy to find this site?</h2><br>
+                <input type="radio" name="q1" id="q1a1" value="true">
+                <span>true</span><br>
+                <input type="radio" name="q1" id="q1a2" value="false">
+                <span>false</span><br>
+                <span id="AnswErrMsg1" class="err"></span><br>
+                <button type="button" id="goTOScene4" value="3">Enter</button>
+            </div><!--End scene3-->
+            <div id="scene4">
+                <h1>Question #2</h1><br>
+                <h2>Would you like to seem more pictures?</h2><br>                
+                <input type="radio" name="q2" id="q2a1" value="true">
+                <span>true</span><br>
+                <input type="radio" name="q2" id="q2a2" value="false">
+                <span>false</span><br>
+                <span id="AnswErrMsg2" class="err"></span><br>
+                <button type="button" id="goTOScene5" value="4">Enter</button>
+            </div><!--End scene4-->    
+            <div id="scene5">
+                <h1>Question #3</h1><br>
+                <h2>Are the topics covered so far too simple?</h2><br>
+                <input type="radio" name="q3" id="q3a1" value="true">
+                <span>true</span><br>
+                <input type="radio" name="q3" id="q3a2" value="false">
+                <span>false</span><br>
+                <span id="AnswErrMsg3" class="err"></span><br>
+                <button type="button" id="goTOScene6" value="5">Enter</button>
+            </div><!--End scene5-->      
+            <div id="scene6">
+                <h1>Question #4</h1><br>
+                <h2>Is the color scheme unpleasant or difficult to view?</h2><br>
+                <input type="radio" name="q4" id="q4a1" value="true">
+                <span>true</span><br>
+                <input type="radio" name="q4" id="q4a2" value="false">
+                <span>false</span><br>
+                <span id="AnswErrMsg4" class="err"></span><br>
+                <button type="button" id="goTOScene7" value="6">Enter</button>
+            </div><!--End scene6-->
+            <div id="scene7">
+                <h1>Please Check Your Answers</h1>
+                <ul>
+                    <li>Your Name: <span id="yourName"></span></li><br>
+                    <h3>Was is easy to find this site?</h3>
+                    <li>Question #1 Answer: <span id="yourQ1"></span></li>
+                    <br><h3>Would you like to seem more pictures?</h3>
+                    <li>Question #2 Answer: <span id="yourQ2"></span></li>
+                    <br><h3>Are the topics covered so far too simple?</h3>
+                    <li>Question #3 Answer: <span id="yourQ3"></span></li>
+                    <br><h3>Is the color scheme unpleasant or difficult to view?</h3>
+                    <li>Question #4 Answer: <span id="yourQ4"></span></li>
+                </ul>
+                <input type="checkbox" name="addMsg" id="addMsg"><span>Click to add a message</span><br>
+                <textarea name="userMsg" id="userMsg"></textarea>
+                <span id="AnswErrMsg5" class="err"></span><br>
+                <button type="reset" id="srtOver">Start Over</button>
+                <button type="button" id="goTOScene8">Submit</button>
+            </div><!--End scene7-->        
+            <div id="scene8">
+                <h1 id="rBig">Survey Submitted Successfully!</h1>
+                <h2 id="pBig">Thank You For Your Input</h2>
+            </div><!--End scene8-->     
+        </form>    
+      </section><!--End of survey-->
+      </main>
+      <footer>
+        Copyright &copy; 2018 The car repair logs <br> 
+        <a href="mailto:zachary.harbison@asu.edu">Zachary.Harbison@asu.edu</a><br>
+        <h2>This Site Is For Educational Purposes Only!</h2>
+      </footer>
+    </div><!-- end #wrapper -->
+    <script src="survey.js"></script>
+  </body>
+
+</html>

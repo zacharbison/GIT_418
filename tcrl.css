@@ -1,0 +1,363 @@
+header{
+	background-color:#4e703b;
+	height:320px;
+	color:#FFFFFF;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+header a{
+    text-decoration:none;
+}
+main a:link{
+    color:#3B4E70;
+}
+main a:visited {
+	color:#703B4E;
+}
+main a:hover {
+    text-decoration:underline;
+}
+body {
+	background-color:#393939;
+	color:#000;
+    font-size:1em;
+	font-family:"Times New Roman", Times, serif;
+}
+nav{
+	background-color:#314625;
+	padding:.05em;
+}
+nav ul{
+	list-style-type: none;
+	padding-left:35px;
+}
+nav li:first-of-type{
+    padding-left:20px;
+}
+nav li{
+    display:inline-block;
+    padding-left:90px;
+}
+nav a{
+    font-size:1.35em;
+	text-decoration:none;
+	color:#A7B79D;
+	font-weight:bold;
+	text-align:center;
+	padding:.25em;
+	border-style:outset;
+	border-color:#4e703b;
+	border-width:4px;
+    font-family:"Times New Roman", Times, serif;
+}
+h1{
+	padding-top:50px;
+	padding-left:2em;
+}
+h2{
+    font-family:"Times New Roman", Times, serif;
+}
+main{
+	padding-left:2em;
+	padding-right:2em;
+	display:block;
+}
+img{
+	padding-top:20px;
+}
+p{
+    margin-left:0px;
+    overflow:auto;
+    display:block;
+}
+#wrapper{
+	background-color:#A7B79D;
+	width:1260px;
+	margin-left:auto;
+	margin-right:auto;
+    border-radius: 15px;
+}
+#QuickConCalc{
+	display:none;
+	position:relative;
+	background-color:#314625;
+	color:#A7B79D;
+	width:600px;
+	height:300px;
+	border-radius:15px;
+	padding:20px;
+	border-style:outset;
+	border-color:#4e703b;
+	border-width:4px;
+	margin-bottom:10px;
+}
+#QuickConCalc button{
+	margin-left:75px;
+	margin-top:5px;
+	color:#A7B79D;
+	font-size:1.25em;
+	background-color:#314625;
+	text-align:center;
+	padding:5px;
+    font-family:"Times New Roman", Times, serif;
+	border-style:outset;
+	border-color:#4e703b;
+	border-width:4px;
+}
+#QuickConCalc input{
+	width:50px;
+	background-color:#4e703b;
+	border-style:inset;
+	border-color:#4e703b;
+	border-width:4px;
+}
+#QuickConCalc img{
+	float:right;
+}
+#QuickConCalc h2{
+	font-size:2em;
+	margin-top:0px;
+	margin-bottom:-10px;
+	margin-left:20px;
+}
+#QuickConCalc h3{
+	margin-top:10px;
+	margin-bottom:0px;
+	margin-left:40px;
+}
+#userNum{
+	font-size:.9em;
+}
+#calcButton{
+	display:none;
+		margin-left:20px;
+}
+button{
+	margin-bottom:-5px;
+	margin-left:-5px;
+	color:#A7B79D;
+	font-size:1.25em;
+	background-color:#314625;
+	text-align:center;
+	padding:5px;
+    font-family:"Times New Roman", Times, serif;
+	border-style:outset;
+	border-color:#4e703b;
+	border-width:4px;
+	border-radius:5px;
+}
+.calculator{
+	display:none;
+}
+
+ #dateForm{
+	background-color:#314625;
+	color:#A7B79D;
+	width:500px;
+	height:300px;
+	border-radius:15px;
+	padding:20px;
+	border-style:outset;
+	border-color:#4e703b;
+	border-width:4px;
+    margin:20px;
+}
+#dateForm input{
+    height:20px;
+	width:50px;
+	background-color:#A7B79D;
+	border-style:inset;
+	border-color:#4e703b;
+	border-width:4px;
+}
+#contactForm{
+
+	background-color:#314625;
+	color:#A7B79D;
+	width:300px;
+	border-radius:15px;
+	padding:20px;
+	border-style:outset;
+	border-color:#4e703b;
+	border-width:4px;
+    margin:20px;
+}
+
+#contactForm input{
+	height:20px;
+	width:200px;
+	background-color:#A7B79D;
+	border-style:inset;
+	border-color:#4e703b;
+	border-width:4px;
+	margin-right:5px;
+	margin-top:-30px;
+}
+#contactOpt input[type=checkbox]{
+	margin-top:5px;
+	width:20px;
+}
+
+#displaySub{
+	display:none;
+}
+textarea{
+	height:75px;
+	width:196px;
+	background-color:#A7B79D;
+	border-style:inset;
+	border-color:#4e703b;
+	border-width:4px;
+	margin-right:5px;
+	margin-top:-30px;
+}
+.floatRight{
+    float:right;
+}
+legend{
+	color:#A7B79D;
+	margin-top: -70px;
+	margin-bottom:-10px;
+	margin-left:30px;
+	font-size:40px;
+	font-weight:bolder;
+}
+.floatLeft{
+	float:left;
+	
+}
+.picBar{
+	margin-left:35px;
+}
+.picBar img{
+	max-height:350px;
+}
+#warning{
+    font-size:1.1em;
+    font-family:monospace;
+    display:none;
+    color:#000;
+    background-color:#F88D14;
+    height:5%;
+    width:1260px;
+    position:fixed;
+    bottom:3%;
+    -webkit-animation-name: flashy;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2s; 
+    -webkit-animation-iteration-count:3;
+    animation-name: flashy;
+    animation-duration: 1s;
+    animation-delay:2s;
+    animation-iteration-count:3;
+}
+#warning a{
+    color:#000;
+    text-decoration:none;
+    font-weight:bolder;
+    margin-left:10px;
+}
+#warning h4{
+    margin-left:10px;
+    margin-top:5px;
+    font-size:1.25em;
+}    
+#warning button{
+    margin-right:2px;
+    margin-top:2px;
+    float:right;
+}    
+#warning span{
+    margin-left:10px;
+    text-decoration:underline;
+}  
+#warning p{
+    margin:10px;
+} 
+@-webkit-keyframes flashy{
+    from {opacity:1;}
+    to {opacity:.5;}
+    from {opacity:.5;}
+    to {opacity:1;}
+}
+@keyframes flashy{
+    from{opacity:1;}
+    to{opacity:.5;}
+    from{opacity:.5;}
+    to{opacity:1;}
+}
+
+footer{
+	background-color:#4e703b;
+	font-size:1em;
+	font-style:italic;
+	text-align:center;
+	padding:1em;
+    border-radius:0 0 15px 15px;
+}
+footer h2{
+    font-size:3em;
+}
+#survStage{
+    width:500px;
+    height:600px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#survStage div:first-of-type{
+    display:block;
+}
+#survStage input[type=radio], #survStage input[type=checkbox]{
+    margin-left:-90px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:-80px;
+}
+#survStage button{
+    margin-top:5px;
+}
+#survStage lable{
+    font-size:1.25em;
+    font-weight:bold;
+}
+#survStage span{
+    font-weight:bolder;
+    margin-top:5px;
+    margin-bottom:5px;
+    vertical-align:text-top;
+}
+#survStage ul{
+	list-style-type: none;
+}
+#survStage li{
+    margin-left:-40px;
+	margin-bottom:-10px;
+}
+#survStage div, #survStage textarea{
+    display:none;
+}
+#survStage textarea{
+    margin-top:0;
+}
+#survStage h3{
+    margin-bottom:0;
+    margin-top:20px;
+    margin-left:-40px;
+    font-size:1em;
+}
+#rBig{
+    font-size:4em;
+    font-family:cursive;
+    margin-left:-250px;
+}
+#pBig{
+    font-size:3em;
+    font-family:cursive;
+    margin-left:-125px;
+}
+#goTOScene8{
+    margin-left:20px;
+}
+.err{
+    color:#aa0000;
+}
