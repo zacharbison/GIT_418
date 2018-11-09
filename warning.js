@@ -10,17 +10,32 @@
 ******************************************************************************/
 var warn = document.getElementById("warning");//the warning section
 var hide = document.getElementById("hideBtn");//hide button, click to close
-
+var userLat;//holds user latitude 
+var userLon;//holds user longitude
 var geoLoc = document.getElementById("navi1");//span where geolocation displays
 var onLine = document.getElementById("navi2");//span where boolean user online
 var platform = document.getElementById("navi3");//span user platform displays
 var userAgent = document.getElementById("navi4");//span user agent displays
 var pixDepth = document.getElementById("navi5");//span user's screen pixel depth
 var scrRes = document.getElementById("navi6");//span for users screen resolution
+var map;//modest maps
+
+//modest maps
+function initMap() {
+    var container = document.getElementById('container');//div on logs.html
+    var template = 'http://{S}tile.openstreetmap.org/{Z}/{X}/{Y}.png';//using modest map template
+    var subdomains = [ '', 'a.', 'b.', 'c.' ];//provided with template
+    var provider = new MM.TemplatedLayer(template, subdomains);//display template and subs
+	var dimensions = new MM.Point(600, 400);//fixed size of 600x400px
+    map = new MM.Map('map', provider, dimensions);//new map object with given parameters 
+    map.setCenterZoom(new MM.Location(userLat, userLon), 14);//map centered on lat and long retired from user
+	map.setZoomRange(10, 15);//how far mouse wheel will zoom in/out (I restricted because some extreme zooms cause errors)
+}
 
 function moreInfo(){
-    warn.style.height = "80%";
+    warn.style.height = "90%";
     warn.style.animationIterationCount = "0";
+	warn.style.overflowY = "scroll";//map makes this pop-up larger than typical screen size, so scrolling enabled 
 }
 function showWarning(){
     warn.style.display = "block";//displays warning, hidden by default
@@ -38,14 +53,19 @@ function showWarning(){
     userAgent.innerHTML =window.navigator.userAgent;// browser's user agent
     pixDepth.innerHTML =screen.pixelDepth;// pix depth of screen
     scrRes.innerHTML =screen.width+" * "+screen.height;//displays screen height and width
+	setTimeout(initMap, 4000)//delays loading map until geo info has been collected
 }
 function userLocation(coordinates){//for displaying coordinates of geolocation
-    geoLoc.innerHTML ="Your latitude "+coordinates.coords.latitude+" and longitude "+coordinates.coords.longitude;
+    userLat = coordinates.coords.latitude;//holds given latitude in userLat to pass to map
+	userLon = coordinates.coords.longitude;//holds given longitude in userLon to pass to map
+	//displays latitude and longitude to user
+    geoLoc.innerHTML = "Your latitude "+coordinates.coords.latitude+" and longitude "+coordinates.coords.longitude;
 }
 function hideWarning(){
     warn.style.display = "none";//close button hides warning
+	
 }
-setTimeout(showWarning, 3000);//waits 3 seconds after loading before displaying warning
+setTimeout(showWarning, 2000);//waits 2 seconds after loading before displaying warning
 
 /*adds a event listener for the elements which should be in index.html. Now uses validation to make backwards compatible with older IE (from text book)*/
 if(warn.addEventListener){//if true then addEventListener
