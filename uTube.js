@@ -1,13 +1,4 @@
-//from me -> AIzaSyD-3YhGQ4-3plScb2xknivVgTE_lsCbVqg 
-https://www.googleapis.com/youtube/v3/search?part=snippet&channelType=any&eventType=completed&maxResults=12&q=automotive+repair&relatedToVideoId=L22GsHQi7tU&type=video&videoType=any&key={AIzaSyD-3YhGQ4-3plScb2xknivVgTE_lsCbVqg}
- var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "https://www.googleapis.com/youtube/v3/search?part=snippet&channelType=any&eventType=completed&maxResults=12&q=automotive+repair&relatedToVideoId=L22GsHQi7tU&type=video&videoType=any&key={AIzaSyD-3YhGQ4-3plScb2xknivVgTE_lsCbVqg}", true);
- 
+
 // 2. This code loads the IFrame Player API code asynchronously.
       var tg = document.createElement('script');
 
