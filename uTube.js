@@ -13,8 +13,8 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          listType : 'QUERY',
-		  
+          listType : 'search',
+		  list : 'PL968D5AF70B82EC06',
           events: {
             'onStateChange': onPlayerStateChange
           }
