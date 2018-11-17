@@ -13,10 +13,9 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          listType : 'query',
-		  part : 'snippet',
-		  q:'automotive',
+          videoId: 'M7lc1UVf-VE',
           events: {
+            'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
           }
         });
