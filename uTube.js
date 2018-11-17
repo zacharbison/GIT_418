@@ -1,7 +1,6 @@
 
 // 2. This code loads the IFrame Player API code asynchronously.
       var tg = document.createElement('script');
-
       tg.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tg, firstScriptTag);
@@ -15,15 +14,11 @@
           width: '640',
           videoId: 'saPGX-1qC4M',
           events: {
-            'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
           }
         });
       }
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
+
 
       // 5. The API calls this function when the player's state changes.
       //    The function indicates that when playing a video (state=1),
